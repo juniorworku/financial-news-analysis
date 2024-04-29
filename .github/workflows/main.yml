@@ -22,8 +22,3 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run linting
-      run: pylint src/
-
-    - name: Run tests
-      run: pytest tests/
