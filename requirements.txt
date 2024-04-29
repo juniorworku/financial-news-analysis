@@ -1,0 +1,6 @@
+nltk==3.8.1
+scikit-learn==0.24.2
+pandas ==
+matplotlib
+scipy 
+seaborn
