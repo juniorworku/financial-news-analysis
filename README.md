@@ -9,6 +9,13 @@ The project directory is structured as follows:
 
 ## Setup Instructions
 1. **Clone the Repository**:
+  -echo "# Financial News Analysis" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/juniorworku/financial-news-analysis.git
+  git push -u origin main
 2. **Set Up Virtual Environment**:
 - Create and activate a virtual environment:
   ```
@@ -19,7 +26,19 @@ The project directory is structured as follows:
 
 3. **Install Dependencies**:
 
-4. **Run the Code**:
+
+4. **Create a New Branch for Task 1**:
+# Ensure you are in the main project directory
+cd financial-news-analysis
+
+# Create a new branch named "task-1"
+git checkout -b task-1
+
+
+## CI/CD Setup
+The project uses GitHub Actions for CI/CD. The workflow file (`main.yml`) is located in the `.github/workflows/` directory. The workflow runs tests on every push to the main and task-1 branches.
+
+5. **Run the Code**:
 - Execute the main scripts or Jupyter notebooks located in the `src/` and `notebooks/` directories.
 
 ## Project Tasks
