@@ -1,20 +1,29 @@
+# Import necessary libraries
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from textblob import TextBlob
+import seaborn as sns
+from datetime import datetime
+import nltk
+from nltk.corpus import stopwords
 from wordcloud import WordCloud
 
 # Load the dataset
-# Replace 'path_to_your_dataset.csv' with the actual path to your dataset
-df = pd.read_csv('path_to_your_dataset.csv')
+df = pd.read_csv('../data/raw_analyst_ratings.csv')
+
+# Ensure you have the necessary NLP libraries and datasets
+nltk.download('punkt')
+nltk.download('stopwords')
 
 # Descriptive Statistics
-## Calculate headline length
+## Textual lengths
 df['headline_length'] = df['headline'].apply(len)
 
-## Count articles per publisher
+## Articles per publisher
 articles_per_publisher = df['publisher'].value_counts()
 
-## Analyze publication date trends
+## Publication date trends
 df['publication_date'] = pd.to_datetime(df['date'])
 df['publication_day'] = df['publication_date'].dt.day_name()
 publication_trends = df.groupby('publication_day').size()
@@ -27,7 +36,7 @@ print(df[['headline_length', 'publisher', 'publication_day']].describe())
 ## Sentiment Analysis
 df['sentiment'] = df['headline'].apply(lambda x: TextBlob(x).sentiment.polarity)
 
-## Word Cloud
+## Topic Modeling - Word Cloud for visualization
 stop_words = set(stopwords.words('english'))
 text = ' '.join(df['headline'])
 wordcloud = WordCloud(stopwords=stop_words, background_color='white').generate(text)
