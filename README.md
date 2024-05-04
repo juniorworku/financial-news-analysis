@@ -1,10 +1,13 @@
-# Financial News Analysis
+# Financial News Sentiment Analysis Project
 
 ## Overview
-Financial News Analysis is a project aimed at analyzing a large corpus of financial news data to uncover insights related to sentiment, topics, and publisher behavior. The project leverages data engineering, natural language processing (NLP), and statistical analysis techniques to extract valuable information from financial news articles and correlate it with stock market movements.
+This project focuses on conducting sentiment analysis on financial news headlines and correlating the sentiment scores with stock price movements. The goal is to uncover actionable insights that can enhance financial forecasting accuracy and inform investment strategies.
 
 ## Project Structure
-The project directory is structured as follows:
+1. Data Collection and Preparation: Financial news datasets containing headlines, publication dates, and associated stock symbols are collected and prepared for analysis.
+2. Sentiment Analysis: Natural Language Processing (NLP) techniques are employed to quantify the sentiment expressed in financial news headlines. Sentiment scores associated with each stock symbol are derived to understand the emotional context surrounding stock-related news.
+3. Correlation Analysis: Statistical correlations are established between news sentiment scores and stock price movements. Daily stock returns are calculated, and correlation analysis is performed to assess the impact of news sentiment on stock performance.
+4.Visualization: Various charts and visualizations are created to better understand the data and analysis results. This includes visualizing the distribution of sentiment scores, publication frequency over time, and trends in publishing times.
 
 
 ## Setup Instructions
@@ -24,15 +27,14 @@ The project directory is structured as follows:
   # On macOS/Linux: source venv/bin/activate
   ```
 
-3. **Install Dependencies**:
-
-
-4. **Create a New Branch for Task 1**:
-# Ensure you are in the main project directory
-cd financial-news-analysis
-
-# Create a new branch named "task-1"
-git checkout -b task-1
+## Tools and Technologies
+Python
+Pandas
+NLTK (Natural Language Toolkit)
+TextBlob
+Matplotlib
+TA-Lib (Technical Analysis Library)
+PyNance
 
 
 ## CI/CD Setup
@@ -41,14 +43,12 @@ The project uses GitHub Actions for CI/CD. The workflow file (`main.yml`) is loc
 5. **Run the Code**:
 - Execute the main scripts or Jupyter notebooks located in the `src/` and `notebooks/` directories.
 
-## Project Tasks
-The project tasks include:
-- Setting up Python environment and Git version control
-- Performing Exploratory Data Analysis (EDA) on the financial news dataset
-- Conducting sentiment analysis and topic modeling on news headlines
-- Analyzing time series data to identify trends in publication frequency and publishing times
-- Investigating publisher behavior and contribution to the news feed
+## Usage
+To run the project:
 
-## Contributing
-Contributions to the project are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
+Ensure that Python and the required libraries are installed on your system.
+Clone the project repository to your local machine.
+Navigate to the project directory.
+Run the main script or Jupyter Notebook containing the analysis code.
+Follow the instructions provided within the code to perform data analysis, sentiment analysis, and correlation analysis.
 
